@@ -1,6 +1,6 @@
 {
   "name": "food-policy",
-  "homepage": "https://github.com/dssuum.io/food_price_determination",
+  "homepage": "https://dssuum.io/food_price_determination",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
