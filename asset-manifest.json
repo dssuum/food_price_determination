@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/dssuum.io/food_price_determination/static/css/main.890e52f9.chunk.css",
+    "main.js": "/dssuum.io/food_price_determination/static/js/main.a5485c7f.chunk.js",
+    "main.js.map": "/dssuum.io/food_price_determination/static/js/main.a5485c7f.chunk.js.map",
+    "runtime-main.js": "/dssuum.io/food_price_determination/static/js/runtime-main.5df6e26e.js",
+    "runtime-main.js.map": "/dssuum.io/food_price_determination/static/js/runtime-main.5df6e26e.js.map",
+    "static/js/2.01abd7fc.chunk.js": "/dssuum.io/food_price_determination/static/js/2.01abd7fc.chunk.js",
+    "static/js/2.01abd7fc.chunk.js.map": "/dssuum.io/food_price_determination/static/js/2.01abd7fc.chunk.js.map",
+    "index.html": "/dssuum.io/food_price_determination/index.html",
+    "static/css/main.890e52f9.chunk.css.map": "/dssuum.io/food_price_determination/static/css/main.890e52f9.chunk.css.map",
+    "static/js/2.01abd7fc.chunk.js.LICENSE.txt": "/dssuum.io/food_price_determination/static/js/2.01abd7fc.chunk.js.LICENSE.txt",
+    "static/media/avatar.243f9d7f.jpg": "/dssuum.io/food_price_determination/static/media/avatar.243f9d7f.jpg",
+    "static/media/bread.ee3ee590.jpg": "/dssuum.io/food_price_determination/static/media/bread.ee3ee590.jpg",
+    "static/media/fresh-fish.b1b7a3fe.png": "/dssuum.io/food_price_determination/static/media/fresh-fish.b1b7a3fe.png",
+    "static/media/fruit.12461c36.png": "/dssuum.io/food_price_determination/static/media/fruit.12461c36.png",
+    "static/media/meat-4.7971fc83.png": "/dssuum.io/food_price_determination/static/media/meat-4.7971fc83.png",
+    "static/media/rice_sack.1ac63f97.jpg": "/dssuum.io/food_price_determination/static/media/rice_sack.1ac63f97.jpg",
+    "static/media/seafood.478b5f08.png": "/dssuum.io/food_price_determination/static/media/seafood.478b5f08.png",
+    "static/media/shopper.5180b916.png": "/dssuum.io/food_price_determination/static/media/shopper.5180b916.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5df6e26e.js",
+    "static/js/2.01abd7fc.chunk.js",
+    "static/css/main.890e52f9.chunk.css",
+    "static/js/main.a5485c7f.chunk.js"
+  ]
+}
