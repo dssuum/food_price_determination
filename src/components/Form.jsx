@@ -51,10 +51,14 @@ function handleChangeInputText(event){
 
   return (
  <div>
+   <h1 className="step-guide">Step 2: Please key in the demography </h1>
+   <div>
+
+   </div>
     <div className = "container">
 
 
-      <div className="title-for-card"> Please key in the demography </div>
+      <div className="title-for-card">  </div>
 
       <div className= "card-demogrphy">
 
