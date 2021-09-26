@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import './App.css';
 
 
 function Form({ setParentCounter }, props) {
@@ -8,21 +8,16 @@ const [demography, setDemography] = useState({
 
   age: 23,
   age_group: "16 to 65",
-  totalHousehold: 2,
+  totalHousehold: 1,
   genderN: "male",
   ethnic: "malay",
   married: "notMarried",
   educationL: "spm",
-  //employment: "public",
   locality: "urban",
-  //residential: "Banglo",
   ownership: "owned",
   centralDummy: "center",
   skill: "low skill"
 });
-
-
-
 
 
 function handleChangeInputText(event){
@@ -51,11 +46,11 @@ function handleChangeInputText(event){
 
   return (
  <div>
-   <h1 className="step-guide">Step 2: Please key in the demography </h1>
+   <h1 className="step-guide">Step 2: Demography Profiles </h1>
    <div>
 
    </div>
-    <div className = "container">
+    <div className = "container-demography">
 
 
       <div className="title-for-card">  </div>
@@ -117,47 +112,24 @@ function handleChangeInputText(event){
       <div className="card card-radiobtn-3">
       <label>Education Level : </label><br></br>
       <input type="radio" id="spm" name="educationL" value="spm" onChange= {handleChangeInputText} checked= {demography.educationL === "spm"}/>
-      <label>SPM</label><br></br>
-      <input type="radio" id="diploma" name="educationL" value="diploma" onChange= {handleChangeInputText} checked= {demography.educationL === "diploma"} />
-      <label>Diploma </label><br></br>
+      <label>less than SPM</label><br></br>
+      {/* <input type="radio" id="diploma" name="educationL" value="diploma" onChange= {handleChangeInputText} checked= {demography.educationL === "diploma"} />
+      <label>Diploma </label><br></br> */}
       <input type="radio" id="degree" name="educationL" value="degree" onChange= {handleChangeInputText} checked= {demography.educationL === "degree"}/>
-      <label>Degree</label><br></br>
-      <input type="radio" id="other" name="educationL" value="other" onChange= {handleChangeInputText} checked= {demography.educationL === "other"}/>
-      <label>Others</label><br></br>
+      <label>higher than Degree</label><br></br>
+      {/* <input type="radio" id="other" name="educationL" value="other" onChange= {handleChangeInputText} checked= {demography.educationL === "other"}/>
+      <label>Others</label><br></br> */}
       </div>
-
-{/*       <div className="card card-radiobtn-3">
-      <label>Employment Status : </label><br></br>
-      <input type="radio" id="public" name="employment" value="public" onChange= {handleChangeInputText} checked= {demography.employment === "public"} />
-      <label>Public</label><br></br>
-      <input type="radio" id="private" name="employment" value="private" onChange= {handleChangeInputText} checked= {demography.employment === "private"} />
-      <label>Private </label><br></br>
-      <input type="radio" id="self" name="employment" value="self" onChange= {handleChangeInputText} checked= {demography.employment === "self"}/>
-      <label>Self-employed</label><br></br>
-      </div> */}
 
 
       <div className="card card-radiobtn-2">
-      <label>Locality :</label><br></br>
+      <label>Location :</label><br></br>
       <input type="radio" id="urban" name="locality" value="urban" onChange= {handleChangeInputText} checked= {demography.locality === "urban"}/>
       <label>Urban</label><br></br>
       <input type="radio" id="rural" name="locality" value="rural" onChange= {handleChangeInputText} checked= {demography.locality === "rural"}/>
       <label>Rural </label><br></br>
       </div>
 
- {/*      <div className="card card-radiobtn-4">
-      <label>Residential :</label><br></br>
-      <input type="radio" id="Banglo" name="residential" value="Banglo" onChange= {handleChangeInputText} checked= {demography.residential === "Banglo"}/>
-      <label>Banglo</label><br></br>
-      <input type="radio" id="Semi-D" name="residential" value="Semi-D" onChange= {handleChangeInputText} checked= {demography.residential === "Semi-D"}/>
-      <label>Semi-D </label><br></br>
-      <input type="radio" id="terrace" name="residential" value="terrace" onChange= {handleChangeInputText} checked= {demography.residential === "terrace"} />
-      <label>Terrace</label><br></br>
-      <input type="radio" id="flat" name="residential" value="flat" onChange= {handleChangeInputText} checked= {demography.residential === "flat"} />
-      <label>Flat</label><br></br>
-      <input type="radio" id="other" name="residential" value="other" onChange= {handleChangeInputText} checked= {demography.residential === "other"} />
-      <label>Others</label><br></br>
-      </div> */}
 
       <div className="card card-radiobtn-2">
       <label htmlFor="ownership">Ownership :</label><br></br>
@@ -168,7 +140,7 @@ function handleChangeInputText(event){
       </div>
 
       <div className="card card-radiobtn-3">
-      <label htmlFor="skill">Skill :</label><br></br>
+      <label htmlFor="skill">Occupation :</label><br></br>
       <input type="radio" id="professional" name="skill" value="professional" onChange= {handleChangeInputText} checked= {demography.skill === "professional"}/>
       <label htmlFor="Banglo">Professional</label><br></br>
       <input type="radio" id="low_skill" name="skill" value="low skill" onChange= {handleChangeInputText} checked= {demography.skill === "low skill"}/>
@@ -176,7 +148,7 @@ function handleChangeInputText(event){
       </div>
 
       <div className="card card-radiobtn-2">
-      <label>Central Dummy :</label><br></br>
+      <label>Region :</label><br></br>
       <input onChange= {handleChangeInputText} type="radio" id="center" name="centralDummy" value="center" checked={demography.centralDummy === "center"}/>
       <label>Center</label><br></br>
       <input type="radio" id="other" name="centralDummy" value="other" onChange= {handleChangeInputText} checked={demography.centralDummy === "other"}/>

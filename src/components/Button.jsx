@@ -1,47 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Tab from './Tab';
+import React, { useState } from 'react';
+import './App.css';
 
 
-class ButtonIncome extends Component {
+function ButtonIncome(props){
+console.log(props)
 
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          activeTab: 'Demography',
-        };
-      }
+return(
+<div >
+<button className="button-next" onClick={ ()=> props.changeTab(3)}>
 
-      onClickTabItem = () => {
-        this.setState({ activeTab: 'Demography' });
-      }
-
-
-      render(){
-        const {
-            onClickTabItem,
-            props: {
-              children,
-            },
-            state: {
-              activeTab,
-            }
-          } = this;
-
-          return(
-<div>
-<button onClick={onClickTabItem}>Next Button</button>
-
-
-
-
+Next
+</button>
 </div>
 
-          )
-      }
-
-
+)
 
 
 }

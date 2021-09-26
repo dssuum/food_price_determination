@@ -7,29 +7,30 @@ function MainPage (){
 
     return(
 
-        <div className="MainPage">
+        <div className="tab_content">
 
-            <h1>Welcome!</h1>
-            <p1>The system is designed for food policy-maker to make price determination based on income group and demography profile</p1>
-            <p1> There are 4 steps that need to made, to get the total food expenditure </p1>
+            <br></br>
+            <p1>The system has been designed for food policy-maker to determine/decide the appropriate price for the selected food items based on socioeconomics profiles of the respondent.</p1><br></br>
+            <p1>Furthermore, this system will give some idea to the users on the effect in food expenditure due to changes in the food prices.</p1><br></br><br></br>
+            <p1> There are four(4) steps that need to made, to get the total food expenditure </p1>
 
             <div className="step-block">
                 <div className="step-item">
                     <div className ="header-step">Step 1</div>
-                    <div>Go to Tab 'Income Group' and Insert your monthly Income in RM</div>
+                    <div>Go to Tab 'Income Group' tab and Insert your monthly Income in RM</div>
 
                 </div >
                 <div className="step-item">
                     <div className ="header-step">Step 2</div>
-                    <div>Go to Tab 'Demography' and Fill in the demography form</div>
+                    <div>Go to Tab 'Demography' tab and Fill in the demography information</div>
                 </div>
                 <div className="step-item">
                     <div className ="header-step">Step 3</div>
-                    <div>Go to Tab 'Food Policy' and Change the food price by moving the slider to the left or right</div>
+                    <div>Go to Tab 'Food price determination' tab and Change the food price by moving the slider to the left or right</div>
                 </div>
                 <div className="step-item">
-                    <div>Step 4</div>
-                    <div>The Result for Total Food Expenditure is displayed on the right</div>
+                    <div className ="header-step">Step 4</div>
+                    <div>The Tab 'Food Expenditure' figures will displayed on the right</div>
                 </div>
 
             </div>

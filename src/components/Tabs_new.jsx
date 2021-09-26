@@ -12,7 +12,7 @@ import ButtonDemo from "./ButtonDemo.jsx";
 import ButtonFood from "./ButtonFood.jsx";
 import SummaryPage from "./Summary.jsx";
 
-function Result() {
+function Tabs_new() {
 
   const [parentCounter, setParentCounter] = useState({
     rice: 0,
@@ -20,7 +20,11 @@ function Result() {
     freshmeat: 0,
     freshfish:0,
     seafood:0,
+    //coconut: 0,
+    //tuber: 0,
+    //processedfish:0,
     vegetables: 0,
+    //butter: 0,
     fruits:0,
     others:0,  
     age: 23,
@@ -197,7 +201,7 @@ var baseprice_vege=6.21;
   
   let vegePrice
   function onGetPriceVege(){
-    vegePrice = (seafood/100 * baseprice_vege + baseprice_vege).toFixed(2)
+    vegePrice = (vege/100 * baseprice_vege + baseprice_vege).toFixed(2)
     return vegePrice
   }
   vegePrice = onGetPriceVege();
@@ -319,7 +323,7 @@ var baseprice_vege=6.21;
         foodExpenditure = stdB40 + (differencericePrice* coef_B40_rice) + (differencefreshMeatPrice * coef_B40_freshmeat)
         + (differencefreshFishPrice* coef_B40_freshfish) + (differenceseafoodPrice* coef_B40_seafood) 
         + (differencefruitPrice * coef_B40_fruits) + (differencevegePrice* coef_B40_vegetables) + (differencebreadPrice * coef_B40_bread_cakes) + (differenceothersPrice * coef_B40_others)
-        + (income * coef_B40_income) + (ageGroupVal * coef_B40_age_group) + (genderVal* coef_B40_gender) + (marriedVal*coef_B40_married) + (ethnicVal* coef_B40_ethnic) + (localityVal* coef_B40_locality) 
+        + (ageGroupVal * coef_B40_age_group) + (genderVal* coef_B40_gender) + (marriedVal*coef_B40_married) + (ethnicVal* coef_B40_ethnic) + (localityVal* coef_B40_locality) 
         + (house * coef_B40_house) + (educationDegreeVal* coef_B40_education_degree) + (ownershipVal* coef_B40_ownership) 
         + (skillProVal* coef_B40_skill_low) + (centralDummyVal * coef_B40_centralDummy);
 
@@ -329,7 +333,7 @@ var baseprice_vege=6.21;
         foodExpenditure = stdM40 + (differencericePrice* coef_M40_rice) + (differencefreshMeatPrice * coef_M40_freshmeat) 
         + (differencefreshFishPrice* coef_M40_freshfish) + (differenceseafoodPrice* coef_M40_seafood) 
         + (differencefruitPrice * coef_M40_fruits) +  (differencevegePrice* coef_M40_vegetables) + (differencebreadPrice * coef_M40_bread_cakes) + (differenceothersPrice * coef_M40_others)
-        + (income * coef_M40_income) + (ageGroupVal * coef_M40_age_group) + (genderVal* coef_M40_gender) + (marriedVal*coef_M40_married)+ (ethnicVal* coef_M40_ethnic) + (localityVal* coef_M40_locality) 
+        + (ageGroupVal * coef_M40_age_group) + (genderVal* coef_M40_gender) + (marriedVal*coef_M40_married)+ (ethnicVal* coef_M40_ethnic) + (localityVal* coef_M40_locality) 
         + (house * coef_M40_house)  + (educationDegreeVal* coef_M40_education_degree) + (ownershipVal* coef_M40_ownership) 
         + (skillProVal* coef_M40_skill_low) + (centralDummyVal * coef_M40_centralDummy);
 
@@ -338,7 +342,7 @@ var baseprice_vege=6.21;
         foodExpenditure = stdT20+ (differencericePrice* coef_T20_rice) + (differencefreshMeatPrice * coef_T20_freshmeat)
         + (differencefreshFishPrice* coef_T20_freshfish) + (differenceseafoodPrice* coef_T20_seafood) 
         + (differencefruitPrice * coef_T20_fruits) + (differencevegePrice* coef_T20_vegetables) + + (differencebreadPrice * coef_T20_bread_cakes) + (differenceothersPrice * coef_T20_others)
-        + (income * coef_T20_income) + (ageGroupVal * coef_T20_age_group) + (genderVal* coef_T20_gender) + (marriedVal*coef_T20_married)+ (ethnicVal* coef_T20_ethnic) + (localityVal* coef_T20_locality) 
+        + (ageGroupVal * coef_T20_age_group) + (genderVal* coef_T20_gender) + (marriedVal*coef_T20_married)+ (ethnicVal* coef_T20_ethnic) + (localityVal* coef_T20_locality) 
         + (house * coef_T20_house) + (educationDegreeVal* coef_T20_education_degree) + (ownershipVal* coef_T20_ownership) 
         + (skillProVal* coef_T20_skill_low) + + (centralDummyVal * coef_T20_centralDummy);
 
@@ -366,7 +370,299 @@ var baseprice_vege=6.21;
 
     <div>
  
+      {/* <div  className="content-sc"> */}
+      <div  className="grid-container-main">
+{/* <div className="grid-box"> */}
+
+    {/* <div className="grid-container-main"> */}
+    
+    <div className="item5">
+
+    <div className="container">
+      <div className="bloc-tabs">
+        <button
+          className={toggleState === 1 ? "tabs active-tabs-new" : "tabs"}
+          onClick={() => toggleTab(1)}
+        >
+          Main Page
+        </button>
+        <button
+          className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(2)}
+        >
+          Step 1 : Income Group
+        </button>
+        <button
+          className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(3)}
+        >
+           Step 2 : Demography
+        </button>
+        <button
+          className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(4)}
+        >
+           Step 3 : Food Determination
+        </button>
+        <button
+          className={toggleState === 5 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(5)}
+        >
+           Summary
+
+        </button>
+      </div>
+
+      <div className="content-tabs">
+        <div
+          className={toggleState === 1 ? "content  active-content" : "content"}
+        >
+          <h2>Welcome!</h2>
+          <hr />
+          <MainPage/>
+        </div>
+
+        <div
+          className={toggleState === 2 ? "content  active-content" : "content"}
+        >
+          {/* <h2>Income (RM)</h2> */}
+          {/* <hr /> */}
+          <h1 className="step-guide">Step 1 : Income (RM) </h1>
+          <div className="card-income">
+          <Income setParentCounter = {setParentCounter} />
+          <ButtonIncome changeTab={toggleState=> setToggleState(toggleState)}></ButtonIncome>
+
+          </div>
+        
+        </div>
+
+        <div
+          className={toggleState === 3 ? "content  active-content" : "content"}
+        >
+          {/* <h2>Demography</h2> */}
+          {/* <hr /> */}
+          
+          <Form  setParentCounter = {setParentCounter}/>
+          <ButtonDemo changeTab={toggleState=> setToggleState(toggleState)}></ButtonDemo>
      
+        </div>
+       
+        <div
+          className={toggleState === 4 ? "content  active-content" : "content"}
+        >
+          {/* <h2>Food Determination</h2> */}
+          {/* <hr /> */}
+          
+          <Card  setParentCounter = {setParentCounter}/>
+          <ButtonFood changeTab={toggleState=> setToggleState(toggleState)}></ButtonFood>
+        </div>
+
+        <div
+          className={toggleState === 5 ? "content  active-content" : "content"}
+        >
+          <h2>Summary</h2>
+          <hr />
+          <div>
+            <br></br>
+            <br></br>
+            <p className="header-table" >Food Price</p>
+            <br></br>
+          <table striped bordered hover size="sm">
+  <thead>
+    <tr >
+      <th>#</th>
+      <th>Food</th>
+      <th>Base Price</th>
+      <th>New Price</th>
+      <th>Percentage Difference</th>
+      <th>Difference in RM</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Rice</td>
+      <td>RM 28.62 </td>
+      <td>RM {ricePrice} </td>
+      <td>{rice} % </td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bread and Cakes</td>
+      <td>RM 5.56</td>
+      <td>RM {breadPrice}</td>
+      <td>{bread_cakes} %</td>
+      <td>RM {differencebreadPrice} </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fresh Meat</td>
+      <td>RM 20.26</td>
+      <td>RM {freshMeatPrice}</td>
+      <td>{freshmeat} %</td>
+      <td>RM {differencefreshMeatPrice} </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Fresh Fish</td>
+      <td>RM 16.79</td>
+      <td>RM {freshFishPrice}</td>
+      <td>{freshfish} %</td>
+      <td>RM {differencefreshFishPrice} </td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>Seafood</td>
+      <td>RM 22.64</td>
+      <td>RM {seafoodPrice}</td>
+      <td>{seafood}%</td>
+      <td>RM {differenceseafoodPrice} </td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>Vegetables</td>
+      <td>RM 6.21</td>
+      <td>RM {vegePrice} </td> 
+      <td> {vege}%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>Fruits</td>
+      <td>RM 6.20</td>
+      <td>RM {fruitPrice}</td>
+      <td> {fruit}%</td>
+      <td>RM {differencefruitPrice} </td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>Others</td>
+      <td>RM 162.82</td>
+      <td>RM {othersPrice} </td>
+      <td>{others}%</td>
+      <td>RM {differenceothersPrice} </td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+          </div>
+
+          <div>
+          <div className = "profile">
+
+          <p className="header-table">Demography</p>
+          <br></br>
+          <div className ="demography-summary"> Total Household: {house} </div>
+          <div className ="demography-summary"> Age Group: {age_group} </div>
+          <div className ="demography-summary"> Gender: {gender} </div>
+          <div className ="demography-summary"> Ethnic: {ethnic} </div>
+          <div className ="demography-summary"> Marital Status: {married} </div>
+          <div className ="demography-summary"> Education Level: {educationL} </div>
+          <div className ="demography-summary"> Locality :  {locality} </div>
+          <div className ="demography-summary"> House Ownership: {ownership} </div>
+        </div>
+
+
+<br></br>
+<br></br>
+<div className="header-table">
+    Base Total Expenditure :  RM1161.39
+</div>
+<div className="header-table">
+    Current Total Expenditure : {total}
+</div>
+
+          </div>
+        
+        
+        </div>
+
+      </div>
+    </div>
+
+
+    </div>
+
+    <div className="item6">
+
+    <div className="calculate">
+    <div className="total-expenditure-top"></div>
+
+    <div className="income-group-grid">
+    <div className="income-group-grid-item">
+    <img className="img-expenditure" src={expenditure} alt={"empty"}/>
+      </div>
+        <div className="income-group-grid-item income-group">
+                <div className="income-level-group">{incomeVal}</div>
+                <div>Income: RM {parentCounter.income}</div>
+                
+        </div>
+
+    </div>
+     
+
+        <div className="total-expenditure">
+
+        <div className="title-food-expenditure"> Total Food Expenditure: </div> 
+        <div className="total-food-expenditure"> RM: {total} </div>
+          <div className="summary-food">
+            <div> Rice: RM {ricePrice} </div> 
+            <div> Bread and Cakes: RM {breadPrice} </div> 
+            <div> Fresh Meat: RM {freshMeatPrice} </div> 
+            <div> Fresh Fish: RM {freshFishPrice} </div> 
+            <div> Fresh Seafood: RM {seafoodPrice} </div> 
+            <div> Vegetables: RM {vegePrice} </div> 
+            <div> Fruits: RM {fruitPrice} </div> 
+            <div> Others: RM {othersPrice} </div> 
+          
+          </div>
+  
+        </div>
+
+        {/* <div className = "profile">
+          <div> Total Household: {house} </div>
+          <div> Age Group: {age_group} </div>
+          <div> Gender: {gender} </div>
+          <div> Ethnic: {ethnic} </div>
+          <div> Marital Status: {married} </div>
+          <div> Education Level: {educationL} </div>
+          <div> Locality :  {locality} </div>
+          <div> House Ownership: {ownership} </div>
+        </div> */}
+  
+
+    {/* <div><button>Set as Initial Value</button></div>
+    <div> Inital Value: {initialval}</div> */}
+    </div>
+
+
+{/* 
+    </div> */}
+
+ 
+    </div>
+
+
+{/* 
+</div> */}
+
+
+</div>
+
+
+      
 
 
     </div>
@@ -374,4 +670,4 @@ var baseprice_vege=6.21;
   );
 }
 
-export default Result;
+export default Tabs_new;

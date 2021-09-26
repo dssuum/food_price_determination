@@ -1,18 +1,12 @@
-import { useState } from "react";
-import "./App-new.css";
-import MainPage from "./MainPage.jsx";
+import React, {useState} from "react";
+import {useTable} from 'react-table';
+import './App.css';
 import Income from './Income';
-import avatar from './avatar.jpg';
-import expenditure from './expenditure.png';
 import Form from './Form.jsx';
 import Card from "./CardNew.jsx";
-import './App.css';
-import ButtonIncome from "./Button.jsx";
-import ButtonDemo from "./ButtonDemo.jsx";
-import ButtonFood from "./ButtonFood.jsx";
-import SummaryPage from "./Summary.jsx";
+import Tabs_new from "./Tabs_new.jsx";
 
-function Result() {
+function Summary(){
 
   const [parentCounter, setParentCounter] = useState({
     rice: 0,
@@ -20,7 +14,11 @@ function Result() {
     freshmeat: 0,
     freshfish:0,
     seafood:0,
+    //coconut: 0,
+    //tuber: 0,
+    //processedfish:0,
     vegetables: 0,
+    //butter: 0,
     fruits:0,
     others:0,  
     age: 23,
@@ -362,16 +360,107 @@ var baseprice_vege=6.21;
     setToggleState(index);
   };
 
-  return (
+    return(
+        <div>
+            
 
-    <div>
- 
+<table striped bordered hover size="sm">
+  <thead>
+    <tr >
+      <th>#</th>
+      <th>Food</th>
+      <th>Base Price</th>
+      <th>New Price</th>
+      <th>Percentage Difference</th>
+      <th>Difference in RM</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Rice</td>
+      <td>RM 28.62 </td>
+      <td>RM </td>
+      <td>% </td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bread and Cakes</td>
+      <td>RM 5.56</td>
+      <td>RM</td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fresh Meat</td>
+      <td>RM 20.26</td>
+      <td>RM</td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Fresh Fish</td>
+      <td>RM 16.79</td>
+      <td>RM</td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>Fresh Seafood</td>
+      <td>RM 22.64</td>
+      <td>RM </td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>Vegetables</td>
+      <td>RM 6.21</td>
+      <td>RM </td>
+
      
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>Fruits</td>
+      <td>RM </td>
+      <td>RM </td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>Others</td>
+      <td>RM 162.82</td>
+      <td>RM </td>
+      <td>%</td>
+      <td>RM {differencericePrice} </td>
+      
+    </tr>
+  </tbody>
+</table>
+
+<div>
+    Base Total Expenditure :  RM1161.39
+</div>
+<div>
+    Current Total Expenditure : {total}
+</div>
 
 
-    </div>
-    
-  );
+        </div>
+    )
 }
 
-export default Result;
+export default Summary;

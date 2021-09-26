@@ -8,6 +8,7 @@ import seafood from './seafood.png';
 import vege from './vege.png';
 import fruit from './fruit.png';
 import shopper from './shopper.png';
+import './App.css';
 
 
 function Card ({ setParentCounter },props){
@@ -24,16 +25,18 @@ function Card ({ setParentCounter },props){
       
         others: 0,
         fruits:0,
-        price_rice:0,
-        price_bread:0,
-        price_freshfish:0,
-        price_freshmeat:0,
-        price_seafood:0,
-        price_vegetable:0,
-        price_fruits:0,
-        price_others: 0
+        new_price_rice:28.61,
+        new_price_bread:5.56,
+        new_price_freshfish:16.79,
+        new_price_freshmeat:20.26,
+        new_price_seafood:22.64,
+        new_price_vegetable:6.21,
+        new_price_fruits:6.20,
+        new_price_others: 162.82
+
       
     })
+    
     
 
 
@@ -55,15 +58,39 @@ function Card ({ setParentCounter },props){
     
       }
 
-     
+      // let difference_percentage_rice
+      // function OnChangepercentageRice(){
+
+      //   difference_percentage_rice = ((rangeval.new_price_rice - 28.61)/28.61 *100).toFixed(2)
+
+      //   return difference_percentage_rice;
+      // }
+
+      // difference_percentage_rice= OnChangepercentageRice();
+
+      //  let new_new_price_rice
+      // function OnChangeSliderRice(){
+      //   new_new_price_rice = (rangeval.rice/100*28.61 +28.61).toFixed(2)
+
+      //   return new_new_price_rice;
+
+      // }
+      // rangeval.new_price_rice  = OnChangeSliderRice();
+
+
+
+
 
 
     return (
 
      
 
-        <div>
-          <div className="step-guide">   <h1>Step 3: Determine Price</h1></div>
+        <div className="container-sc">
+          <div>   
+          <h1 className="step-guide">Step 3: Price Determination </h1>
+          {/* <p>Step 3: Determine Price</p> */}
+          </div>
        
         <div className="grid-style-2">
 
@@ -79,8 +106,8 @@ function Card ({ setParentCounter },props){
           <div className="item3">
         <label> Base Price: 28.61 </label><br></br>
           {/* <label> Average Price: RM 28.61 </label><br></br> */}
-          <label> New Price: RM {(rangeval.rice/100*28.61 +28.61).toFixed(2)} </label><br></br>
-          
+          <label> New Price: RM </label>
+          <input name="new_price_rice" onChange= {handleChange} value={(rangeval.rice/100*28.61 +28.61).toFixed(2)}/><br></br>      
             <div className = "box">
             <div class="value right">-20</div>
             <div class="slider-container">
@@ -102,7 +129,8 @@ function Card ({ setParentCounter },props){
       
       <div className="item3">
       <label> Base Price: 5.56 </label><br></br>
-        <label> New Price: RM {(rangeval.price_bread/100*5.56 +5.56).toFixed(2)} </label><br></br>  
+      <label> New Price: RM </label>
+        <input name="new_price_bread" onChange= {handleChange} value={(rangeval.bread_cakes/100*5.56 +5.56).toFixed(2)}/><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -126,7 +154,8 @@ function Card ({ setParentCounter },props){
 
         <div className="item3">
         <label>Base Price: RM20.26 </label> <br></br>
-        <label> New Price: {(rangeval.freshmeat/100*20.26 + 20.26).toFixed(2)} </label><br></br>  
+        <label> New Price: </label>
+        <input name="new_price_freshmeat" onChange= {handleChange} value={(rangeval.freshmeat/100*20.26 + 20.26).toFixed(2)}/><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -150,7 +179,8 @@ function Card ({ setParentCounter },props){
         
         <div className="item3">
         <label>Base Price: RM16.79 </label> <br></br>  
-        <label>New Price: {(rangeval.freshfish/100*16.79 + 16.79).toFixed(2)} </label><br></br> 
+        <label>New Price:  </label>
+        <input name="new_price_freshfish" onChange= {handleChange} value={(rangeval.freshfish/100*16.79 + 16.79).toFixed(2)}/><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -171,7 +201,8 @@ function Card ({ setParentCounter },props){
        
        <div className="item3">
        <label>Base Price: RM22.64</label><br></br>  
-        <label>New Price RM: {(rangeval.seafood/100*22.64 + 22.64).toFixed(2)} </label><br></br> 
+        <label>New Price RM: </label>
+        <input name="new_price_seafood" onChange= {handleChange} value={(rangeval.seafood/100*22.64 + 22.64).toFixed(2)} /><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -195,7 +226,8 @@ function Card ({ setParentCounter },props){
 
         <div className="item3">
         <label>Base Price: RM6.21</label><br></br> 
-        <label>New Price RM: {(rangeval.vegetables/100*6.21 + 6.21).toFixed(2)} </label> 
+        <label>New Price RM: </label> 
+        <input name="new_price_vegetable" onChange= {handleChange} value={(rangeval.vegetables/100*6.21 + 6.21).toFixed(2)} /><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -220,7 +252,8 @@ function Card ({ setParentCounter },props){
 
         <div className="item3">
         <label>Base Price: RM6.20</label><br></br>   
-        <label>New Price: RM {(rangeval.fruits/100 * 6.2 +6.2).toFixed(2)} </label> 
+        <label>New Price: RM  </label> 
+        <input name="new_price_fruits" onChange= {handleChange} value={(rangeval.fruits/100 * 6.2 +6.2).toFixed(2)} /><br></br>
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">
@@ -243,7 +276,9 @@ function Card ({ setParentCounter },props){
 
         <div className="item3">
         <label>Base Price: RM 162.82</label> <br></br>
-        <label> New Price: {(rangeval.others/100*162.82 + 162.82).toFixed(2)} </label> 
+        <label> New Price: </label> 
+        <input name="new_price_others" onChange= {handleChange} value={(rangeval.others/100*162.82 + 162.82).toFixed(2)}  /><br></br>
+       
         <div className = "box">
         <div class="value right">-20</div>
         <div class="slider-container">

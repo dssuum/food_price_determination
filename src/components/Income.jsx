@@ -4,9 +4,17 @@ import ButtonIncome from "./Button";
 
 function Income ({setParentCounter}){
 
+  
+
     const [income, setIncome] = useState({
         income:2000
     })
+
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+      setToggleState(index);
+    };
 
     function handleChangeInputText(event){
         const {name, value} = event.target;
@@ -33,19 +41,16 @@ function Income ({setParentCounter}){
 
        
       <div>
-        <h1 className="step-guide">Step 1 : Please Enter your Income in RM </h1>
+        
        <div className="income-grid">
-                <div className="card-income">
+                <div >
           
-                <div className="text-input-income">
+                <div className="card-income">
                   <input type="text" onChange= {handleChangeInputText} name="income" value={income.income}/>
                 </div>
                
-               
-                
                 <div>
-                  <ButtonIncome></ButtonIncome>
-               {/*  <button className="button-income">Next </button> */}
+                {/* <button className="button-income">Next </button> */}
                 </div>
                 </div>
                
