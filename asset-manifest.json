@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/food_price_determination/static/css/main.8867976c.chunk.css",
-    "main.js": "/food_price_determination/static/js/main.ffe7355b.chunk.js",
-    "main.js.map": "/food_price_determination/static/js/main.ffe7355b.chunk.js.map",
+    "main.css": "/food_price_determination/static/css/main.a684e408.chunk.css",
+    "main.js": "/food_price_determination/static/js/main.45234f8d.chunk.js",
+    "main.js.map": "/food_price_determination/static/js/main.45234f8d.chunk.js.map",
     "runtime-main.js": "/food_price_determination/static/js/runtime-main.49a7e645.js",
     "runtime-main.js.map": "/food_price_determination/static/js/runtime-main.49a7e645.js.map",
     "static/js/2.b9b79b48.chunk.js": "/food_price_determination/static/js/2.b9b79b48.chunk.js",
     "static/js/2.b9b79b48.chunk.js.map": "/food_price_determination/static/js/2.b9b79b48.chunk.js.map",
     "index.html": "/food_price_determination/index.html",
-    "static/css/main.8867976c.chunk.css.map": "/food_price_determination/static/css/main.8867976c.chunk.css.map",
+    "static/css/main.a684e408.chunk.css.map": "/food_price_determination/static/css/main.a684e408.chunk.css.map",
     "static/js/2.b9b79b48.chunk.js.LICENSE.txt": "/food_price_determination/static/js/2.b9b79b48.chunk.js.LICENSE.txt",
     "static/media/avatar.243f9d7f.jpg": "/food_price_determination/static/media/avatar.243f9d7f.jpg",
     "static/media/bread.ee3ee590.jpg": "/food_price_determination/static/media/bread.ee3ee590.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.49a7e645.js",
     "static/js/2.b9b79b48.chunk.js",
-    "static/css/main.8867976c.chunk.css",
-    "static/js/main.ffe7355b.chunk.js"
+    "static/css/main.a684e408.chunk.css",
+    "static/js/main.45234f8d.chunk.js"
   ]
 }
